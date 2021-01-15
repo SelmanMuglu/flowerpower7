@@ -40,6 +40,48 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="adres" class="col-md-4 col-form-label text-md-right">{{ __('Adres') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="adres" type="text" class="form-control @error('adres') is-invalid @enderror" name="adres"  value="{{ old('adres') }}" required autocomplete="adres" autofocus>
+
+                                @error('adres')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="postcode" class="col-md-4 col-form-label text-md-right">{{ __('Postcode') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="postcode" type="text" class="form-control @error('postcode') is-invalid @enderror" name="postcode"  required value="{{ old('postcode') }}" autocomplete="postcode" autofocus>
+
+                                @error('postcode')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="woonplaats" class="col-md-4 col-form-label text-md-right">{{ __('Woonplaats') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="woonplaats" type="text" class="form-control @error('woonplaats') is-invalid @enderror" name="woonplaats" value="{{ old('woonplaats') }}" required autocomplete="name" autofocus>
+
+                                @error('woonplaats')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
