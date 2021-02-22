@@ -20,6 +20,21 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/contact', 'ContactController@index')->name('contact');
+
+
+//Route::get('/artikel/{artikels}/edit', 'ArtikelsController@edit')->name('artikel')->middleware('can:manage-users');
+//Route::put('/artikel/{artikels}', 'ArtikelsController@update');
+//Route::get('/artikel/create', 'ArtikelsController@create')->name('artikel')->middleware('can:manage-users');
+//Route::post('/artikel', 'ArtikelsController@store');
+//Route::get('/artikel', 'ArtikelsController@index')->name('artikel');
+//Route::get('/artikel/{artikels}/edit', 'ArtikelsController@edit')->name('artikel')->middleware('can:manage-users');
+//Route::put('/artikel/{artikels}', 'ArtikelsController@update');
+Route::resource('/artikel', 'ArtikelsController',['except' => ['show']]);
+
+
+
+
 
 
 
