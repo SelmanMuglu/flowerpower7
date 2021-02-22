@@ -34,9 +34,9 @@ class ArtikelsController extends Controller
         return redirect('/artikel');
     }
 
-    public function edit(Artikel $artikels)
+    public function edit(Artikel $artikel)
     {
-        return view('artikel.edit', ['artikels' => $artikels]);
+        return view('artikel.edit', ['artikel' => $artikel]);
 
     }
 
@@ -47,6 +47,12 @@ class ArtikelsController extends Controller
        $artikel->prijs = request('prijs');
        $artikel->save();
 
-       return redirect('/artikel');
+       return redirect('artikel');
+    }
+
+    public function destroy(Artikel $artikel)
+    {
+        $artikel->delete();
+        return redirect('artikel');
     }
 }

@@ -46,7 +46,7 @@
                 <div class="card">
                     <div class="card-header">
                         @can('edit-users')
-                        <a href="{{url('artikel/create')}}">
+                        <a href="{{route('artikel.create')}}">
                             <button type="button" class="btn btn-primary float-left">toevoegen</button>
                         </a>
                         @endcan
@@ -72,13 +72,13 @@
                                     <td>€{{$artikel->prijs}},-</td>
                                     @can('edit-users')
                                         <td>
-                                            <a href="artikel/{{$artikel->artikel_id}}/edit">
+                                            <a href="{{route('artikel.edit', $artikel->artikel_id)}}">
                                                 <button type="button" class="btn btn-primary float-left">Edit</button>
                                             </a>
                                     @endcan
                                     <td>
                                         @can('delete-users')
-                                            <form action="" method="POST"
+                                            <form action="{{route('artikel.destroy', $artikel)}}" method="POST"
                                                   class="float-left">
                                                 @csrf
                                                 {{method_field('DELETE')}}
