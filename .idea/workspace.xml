@@ -139,7 +139,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../authentication" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -198,6 +198,10 @@
       <workItem from="1613997878553" duration="7522000" />
       <workItem from="1614466809319" duration="217000" />
       <workItem from="1614535720009" duration="121000" />
+      <workItem from="1614537680695" duration="197000" />
+      <workItem from="1614598802216" duration="7000" />
+      <workItem from="1614603127863" duration="697000" />
+      <workItem from="1614604863070" duration="762000" />
     </task>
     <task id="LOCAL-00001" summary="Different roles can be separated. An user makes a profile and the current admin can give a new user a role if this is needed.">
       <created>1610732229688</created>
@@ -220,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614005861366</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="read me updated">
+      <created>1614537835201</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614537835201</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,17 +241,19 @@
     <MESSAGE value="Different roles can be separated. An user makes a profile and the current admin can give a new user a role if this is needed." />
     <MESSAGE value="Crud has been added to the project." />
     <MESSAGE value="The previous errors are fixed and the CRUD for the Artikel table is now complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="The previous errors are fixed and the CRUD for the Artikel table is now complete" />
+    <MESSAGE value="read me updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="read me updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613056639426">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1613056639426" />
-    <state x="34" y="0" key="CommitChangelistDialog2" timestamp="1614005860313">
+    <state x="34" y="0" key="CommitChangelistDialog2" timestamp="1614537834618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="34" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1614005860313" />
+    <state x="34" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614537834618" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1614535840042">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -258,14 +271,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1611150735325" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1614005863039">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1614537837506">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1614005863039" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1614000636732">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614537837505" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1614537781192">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1614000636732" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1613315275610" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1614537781192" />
   </component>
 </project>
