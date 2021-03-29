@@ -16,7 +16,7 @@
                                 <input type="text" class="form-control" name="artikel" value="{{$artikel->artikel}}">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">artikel</label>
+                                <label for="exampleInputPassword1">Prijs</label>
                                 <input type="text" class="form-control" name="prijs" value="{{$artikel->prijs}}">
                             </div>
                             <button type="submit" class="btn btn-primary">Toevoegen</button>

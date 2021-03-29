@@ -70,6 +70,11 @@
                                 <tr>
                                     <td>{{$artikel->artikel}}</td>
                                     <td>€{{$artikel->prijs}},-</td>
+                                    @can('for-users')
+                                    <td><a href="{{url('artikel/bestellen', $artikel->artikel_id)}}">
+                                            <button type="button" class="btn btn-primary float-left">Bestellen</button>
+                                        </a></td>
+                                    @endcan
                                     @can('edit-users')
                                         <td>
                                             <a href="{{route('artikel.edit', $artikel->artikel_id)}}">

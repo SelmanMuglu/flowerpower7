@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBestellingTable extends Migration
+class CreateBestellingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateBestellingTable extends Migration
      */
     public function up()
     {
-        Schema::create('bestelling', function (Blueprint $table) {
+        Schema::create('bestellings', function (Blueprint $table) {
             $table->unsignedBigInteger('artikel_id');
             $table->foreign('artikel_id')
                 ->references('artikel_id')
@@ -23,15 +23,17 @@ class CreateBestellingTable extends Migration
             $table->unsignedBigInteger('winkel_id');
             $table->foreign('winkel_id')
                 ->references('winkel_id')
-                ->on('winkel')
+                ->on('winkels')
                 ->onDelete('cascade');
 
-            $table->unsignedBigInteger('id');
-            $table->foreign('id')
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
+
             $table->integer('aantal');
+            $table->string('afgehaald')->default('nee');
             $table->timestamps();
         });
     }

@@ -13,7 +13,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Meer... </a>
+                        <a href="{{route('artikel.index')}}" class="btn btn-primary">Meer... </a>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                     <h5 class="card-title">Onze winkels</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <a href="#" class="btn btn-primary">Meer...</a>
+                    <a href="" class="btn btn-primary">Meer...</a>
                 </div>
             </div>
         </div>

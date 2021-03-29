@@ -49,6 +49,10 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
+                            <a class="nav-link" href="{{url('/')}}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link" href="{{route('artikel.index')}}">Artikelen</a>
                         </li>
 
@@ -70,6 +74,10 @@
                             </li>
                         @endif
                     @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('/')}}">Home</a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('artikel.index')}}">Artikelen</a>
                         </li>
