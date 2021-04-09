@@ -33,6 +33,8 @@ class CreateBestellingsTable extends Migration
                 ->onDelete('cascade');
 
             $table->integer('aantal');
+            $table->double('prijs');
+            $table->integer('totaal');
             $table->string('afgehaald')->default('nee');
             $table->timestamps();
         });

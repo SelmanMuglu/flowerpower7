@@ -1,0 +1,118 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\User;
+
+use App\Card;
+
+use App\Product;
+
+use DB;
+
+use Auth;
+
+use Illuminate\Http\Request;
+
+class CardController extends Controller
+{
+
+    public function __construct()
+    {
+        $this->middleware(['auth','verified']);
+    }
+
+
+    public function index()
+    {
+
+        $CardProducts = Product::all();
+
+        $Cards = Card::all();
+
+        $totalPrice = DB::table("cards")->where('user_id', auth()->id())->get()->sum("price");
+
+        $totalProducts = DB::table("cards")->where('user_id', auth()->id())->get()->sum("amount");
+
+        return view('checkout.card',compact('totalPrice', 'totalProducts', 'Cards', 'CardProducts'));
+    }
+
+    public function create(Request $request, $id)
+    {
+
+
+    }
+
+
+    public function store(Request $request, $id)
+    {
+        $ProductID = Product::find($id);
+
+        $data = request()->validate([
+            'size' => 'required|in:XS,S,M,L,XL,XXL',
+            'amount' => 'required|digits_between:1,5|numeric',
+        ]);
+
+        $Card = new Card();
+        
+        $Card->user_id = auth()->id();
+        $Card->product_id = $ProductID->id;
+        $Card->size = $request->input('size');
+        $Card->amount = $request->input('amount'); 
+        $Card->price = $ProductID->price * $Card->amount;
+
+        $Card->save();
+
+        return redirect('/shop');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+
+        $datas = Card::where('user_id', Auth::id())->find($id); 
+
+        $datas->delete();
+
+        return redirect('/cart');
+    }
+}

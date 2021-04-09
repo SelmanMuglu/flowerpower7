@@ -11,19 +11,18 @@
                             @csrf
                             <div class="form-group">
                                 <label for="winkel">Kies de winkel</label>
-                                <select class="custom-select" id="inputGroupSelect01">
+                                <select name="winkel" class="custom-select" id="inputGroupSelect01">
                                     @foreach($winkels as $winkel)
-                                        <option name="winkel_id" value="{{$winkel->winkel_id}}">{{$winkel->plaats}}</option>
+                                        <option value="{{$winkel->winkel_id}}">{{$winkel->plaats}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-
                                 <label for="exampleInputPassword1">Artikel</label>
-                                <textarea type="text" rows="1" class="form-control" name="artikel_id" value="{{$artikel->artikel_id}}">{{$artikel->artikel}}</textarea>
+                                <input type="text" class="form-control" name="artikel" value="{{$artikel->artikel}}" readonly>
+                                <input type="hidden" rows="1" class="form-control" name="artikel_id" value="{{$artikel->artikel_id}}">
                                 <label for="exampleInputPassword1">Prijs</label>
-                                <textarea type="text" rows="1"  class="form-control" name="prijs" value="{{$artikel->prijs}}">{{$artikel->prijs}}</textarea>
-
+                                <input type="text" rows="1"  class="form-control" name="prijs" value="{{$artikel->prijs}}">
                             </div>
                             <div class="form-row align-items-center">
                                 <div class="col-auto my-1">

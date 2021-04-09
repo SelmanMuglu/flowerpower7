@@ -70,6 +70,7 @@
                                 <tr>
                                     <td>{{$artikel->artikel}}</td>
                                     <td>€{{$artikel->prijs}},-</td>
+                                    <td>{{$artikel->bestellingen()->count()}}</td>
                                     @can('for-users')
                                     <td><a href="{{url('artikel/bestellen', $artikel->artikel_id)}}">
                                             <button type="button" class="btn btn-primary float-left">Bestellen</button>

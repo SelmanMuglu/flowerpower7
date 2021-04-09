@@ -13,4 +13,8 @@ class Artikel extends Model
         return $this->belongsToMany('App\Winkel');
     }
 
+    public function bestellingen(){
+        return $this->hasMany('App\Bestelling', 'artikel_id');
+    }
+
 }

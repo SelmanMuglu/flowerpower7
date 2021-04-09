@@ -2,25 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Bestelling;
 use App\Artikel;
 use App\Winkel;
 use Illuminate\Http\Request;
 
 class BestellingsController extends Controller
 {
-    public function create(){
+   public function index(){
 
-        $artikel = Artikel::all();
-//        dd($artikel);
-        $winkels = Winkel::all('plaats', 'winkel_id');
+       $bestellingen = Bestelling::all();
 
-        return view('bestellen.create',['artikel' => $artikel], ['winkels' => $winkels]);
-    }
+       return view('bestelling', compact('bestellingen'));
 
-    public function bestellen(Artikel $artikel){
-        $winkels = Winkel::all('plaats', 'winkel_id');
-
-        return view('artikel.bestellen' ,compact('winkels', 'artikel'));
-    }
+   }
 
 }

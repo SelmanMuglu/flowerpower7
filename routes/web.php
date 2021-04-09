@@ -34,6 +34,7 @@ Route::post('/artikel/bestellingen', 'ArtikelsController@storeBestelling');
 
 //Route::resource('/bestellen', 'BestellingsController',['except'=> ['index','store']]);
 
+Route::get('/bestelling','BestellingsController@index')->name('bestelling');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function (){
     Route::resource('/users', 'UsersController',['except' => ['show', 'create', 'store']]);
